@@ -5,8 +5,9 @@ steps:
   - name: docker
     image: plugins/docker
     settings:
-      username: docker_username
-      password: docker_password
+      username: kaddopur
+      password:
+        from_secret: docker_password
       repo: kaddopur/drone
       dry_run: true
       tags: latest
