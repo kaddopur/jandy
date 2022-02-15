@@ -3,4 +3,6 @@ pipeline:
     image: plugins/docker
     repo: kaddopur/drone
     secrets: [docker_username, docker_password]
+    build_args:
+      - AUTH_KEY_ARG=asdf
     dry_run: true
