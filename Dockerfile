@@ -1,4 +1,4 @@
 FROM node:16-alpine
 
-RUN echo ${AUTH_KEY_ARG}
+RUN echo${TOKEN}
 CMD ['ls']
