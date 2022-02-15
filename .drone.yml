@@ -1,8 +1,14 @@
-pipeline:
-  publish:
+kind: pipeline
+name: default
+
+steps:
+  - name: docker
     image: plugins/docker
-    repo: kaddopur/drone
-    secrets: [docker_username, docker_password]
-    build_args:
-      - AUTH_KEY_ARG=asdf
-    dry_run: true
+    settings:
+      username: docker_username
+      password: docker_password
+      repo: kaddopur/drone
+      dry_run: true
+      tags: latest
+      build_args:
+        - AUTH_KEY_ARG=http://yourproxy.com
