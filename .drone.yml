@@ -6,7 +6,7 @@ steps:
     image: plugins/docker
     environment:
       TOKEN:
-        from_secret: foo
+        from_secret: FOO
     settings:
       username: kaddopur
       password:
