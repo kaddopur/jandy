@@ -1,9 +1,4 @@
 pipeline:
-  build:
-    image: node
-    commands:
-      - npm install
-      - npm test
   publish:
     image: plugins/docker
     repo: kaddopur/drone
