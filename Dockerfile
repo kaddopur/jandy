@@ -1,4 +1,6 @@
 FROM node:16-alpine
 
-RUN echo${TOKEN}
+ENV BAR=asdf
+RUN echo ${BAR}
+
 CMD ['ls']
